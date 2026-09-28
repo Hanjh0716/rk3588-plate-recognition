@@ -1,0 +1,61 @@
+# ============================================================
+# .gitignore
+# ============================================================
+
+# ---------- 大文件：绝对不要提交 ----------
+# WSL 环境备份（几百 MB ~ 几 GB）
+setup/ubuntu-backup.tar
+
+# 模型文件（ONNX 约 29MB，RKNN 约 7MB）
+*.onnx
+*.rknn
+*.pt
+*.pth
+*.tflite
+*.caffemodel
+*.weights
+
+# 调试用的图片（几张就十几 MB）
+practice/**/_debug/
+practice/**/output/
+practice/**/output_*/
+
+# 数据集
+datasets/
+data/
+
+# 视频
+*.mp4
+*.avi
+*.mov
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.python-version
+*.egg-info/
+.pytest_cache/
+
+# ---------- 编辑器 / 系统 ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 脚本产生的临时文件 ----------
+report.txt
+result.txt
+scores.txt
+*.log
+
+# ---------- 注意 ----------
+# docs/images/ 里的示意图【允许提交】（README 里要放演示图）
+# 如果你想放一张检测结果的演示图，压到 500KB 以内再放进去
